@@ -1,0 +1,249 @@
+.slot-management-container {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.slot-controls {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.date-picker-input,
+.office-selector {
+    padding: 0.6rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #334155;
+    background-color: white;
+    /* Force light background */
+}
+
+.slot-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+/* Slot Grid */
+.slot-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    /* 50 slots = 10 cols x 5 rows */
+    gap: 0.75rem;
+}
+
+.slot-box {
+    aspect-ratio: 1;
+    border-radius: 8px;
+    border: 2px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: #f8fafc;
+    position: relative;
+}
+
+.slot-box:hover {
+    border-color: #3b82f6;
+    color: #3b82f6;
+}
+
+.slot-box.occupied {
+    background-color: #fee2e2;
+    border-color: #ef4444;
+    color: #991b1b;
+    cursor: default;
+}
+
+.slot-box.allocating:hover {
+    background-color: #dcfce7;
+    border-color: #22c55e;
+    color: #166534;
+    cursor: pointer;
+}
+
+/* Tooltip for occupied slots */
+.slot-box .tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    /* Position above */
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.slot-box:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Unallocated List */
+.unallocated-panel {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fafafa;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.unallocated-panel h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.booking-item {
+    background: white;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.booking-item:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.booking-item.selected {
+    border-color: #2563eb;
+    background-color: #eff6ff;
+    border-width: 2px;
+}
+
+.booking-item h4 {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #1e293b;
+}
+
+.booking-item p {
+    margin: 0.25rem 0 0;
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.action-modal {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.action-modal h3 {
+    margin-top: 0;
+    color: #1a202c;
+    margin-bottom: 1.5rem;
+}
+
+.modal-details {
+    margin-bottom: 2rem;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.modal-btn {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.move-btn {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.move-btn:hover {
+    background-color: #2563eb;
+}
+
+.cancel-booking-btn {
+    background-color: #ef4444;
+    color: white;
+}
+
+.cancel-booking-btn:hover {
+    background-color: #dc2626;
+}
+
+.close-btn {
+    background-color: #f3f4f6;
+    color: #4b5563;
+}
+
+.close-btn:hover {
+    background-color: #e5e7eb;
+}
+
+/* Move Indicator */
+.moving-indicator {
+    margin-left: auto;
+    background-color: #ebf8ff;
+    color: #3182ce;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #bee3f8;
+}
+
+.cancel-move-btn {
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-decoration: underline;
+}

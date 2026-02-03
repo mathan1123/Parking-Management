@@ -1,0 +1,160 @@
+.footer-container {
+    background-color: #dbeafe;
+    /* Light blue background */
+    color: #1e293b;
+    padding: 4rem 2rem 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #94a3b8;
+}
+
+.footer-brand-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo .logo-icon {
+    font-size: 1.5rem;
+    color: #2563eb;
+}
+
+.footer-logo .logo-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.contact-section h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #334155;
+    font-weight: 600;
+}
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-item .icon {
+    color: #3b82f6;
+}
+
+.footer-links-section {
+    display: flex;
+    gap: 4rem;
+}
+
+.link-column h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #334155;
+}
+
+.link-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-column ul li {
+    margin-bottom: 0.8rem;
+}
+
+.link-column ul li a {
+    text-decoration: none;
+    color: #475569;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.link-column ul li a:hover {
+    color: #2563eb;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 1.5rem auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: #64748b;
+    text-align: center;
+}
+
+.copyright a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.scroll-top-btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #1e293b;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.scroll-top-btn:hover {
+    transform: translateY(-3px);
+    color: #2563eb;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footer-links-section {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .scroll-top-btn {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        margin-left: 1rem;
+    }
+}

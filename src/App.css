@@ -1,0 +1,12 @@
+.app {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  background-color: #f0f4f8;
+  /* Light blue/gray background behind the card */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Allow children to take full width */
+  overflow-x: hidden;
+}

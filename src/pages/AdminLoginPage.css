@@ -1,0 +1,114 @@
+.admin-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-login-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.admin-login-card h2 {
+    font-size: 2rem;
+    color: #1a202c;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.admin-login-card p {
+    color: #718096;
+    margin-bottom: 2rem;
+}
+
+.admin-input-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.admin-input-group label {
+    display: block;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #4a5568;
+}
+
+.admin-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    background-color: #fff;
+    color: #333;
+}
+
+.admin-input:focus {
+    border-color: #1062fe;
+    /* VDart Blue-ish */
+}
+
+.admin-input::placeholder {
+    color: #a0aec0;
+}
+
+.admin-login-btn {
+    width: 100%;
+    padding: 0.85rem;
+    background-color: #1a56db;
+    /* Strong Blue */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.admin-login-btn:hover {
+    background-color: #1e40af;
+}
+
+.admin-login-btn:disabled {
+    background-color: #93c5fd;
+    cursor: not-allowed;
+}
+
+.error-msg {
+    color: #e53e3e;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}

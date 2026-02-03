@@ -1,0 +1,145 @@
+/* Layout Grid */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    padding-left: 250px;
+    width: 100%;
+}
+
+/* Main Content */
+.dashboard-main {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+/* Filters Header */
+.dashboard-header-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: flex-end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filter-group label {
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.filter-select {
+    padding: 0.6rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: white;
+    min-width: 150px;
+    color: #1e293b;
+    outline: none;
+}
+
+.export-btn {
+    padding: 0.6rem 1.5rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    height: fit-content;
+    margin-bottom: 2px;
+    /* Align with inputs */
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.stat-info h4 {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.stat-info p {
+    margin: 0.25rem 0 0 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* Tabs */
+.dashboard-tabs {
+    display: flex;
+    gap: 2rem;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+    padding: 0.75rem 0;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #64748b;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-btn.active {
+    color: #2563eb;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2563eb;
+}
+
+/* Table Area */
+.table-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    min-height: 200px;
+}

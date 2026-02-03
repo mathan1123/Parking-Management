@@ -1,0 +1,147 @@
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.create-admin-layout {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2rem;
+}
+
+.create-admin-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Form Styles */
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    width: 100%;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #1e293b;
+    background-color: #fcfcfc;
+    transition: all 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.btn-create-submit {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 1rem;
+}
+
+.btn-create-submit:hover {
+    background-color: #1d4ed8;
+}
+
+/* List Styles */
+.list-section h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+}
+
+.admin-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #f1f5f9;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+
+.admin-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-code {
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+}
+
+.admin-email {
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.btn-edit-link {
+    color: #3b82f6;
+    background: none;
+    border: none;
+    font-size: 0.875rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-edit-link:hover {
+    text-decoration: underline;
+}
+
+.no-data {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 2rem;
+}

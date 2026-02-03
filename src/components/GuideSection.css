@@ -1,0 +1,190 @@
+.guide-section {
+    padding: 6rem 2rem;
+    background-color: #f8fafc;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.guide-title {
+    font-size: 3.5rem;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.guide-title .highlight {
+    background-color: #1d4ed8;
+    /* Darker Blue Block */
+    color: white;
+    padding: 0 10px;
+    border-radius: 4px;
+    display: inline-block;
+    transform: skew(-5deg);
+    /* Slight decorative skew */
+}
+
+.guide-title .highlight::after {
+    content: none;
+    /* Remove previous underline */
+}
+
+.guide-subtitle {
+    color: #64748b;
+    margin-bottom: 5rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.isometric-container {
+    perspective: 1200px;
+    /* Better depth */
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.isometric-grid {
+    display: flex;
+    gap: 40px;
+    transform-style: preserve-3d;
+    /* Cleaner floating perspective */
+    transform: rotateX(45deg) rotateZ(-20deg);
+}
+
+.iso-card {
+    position: relative;
+    width: 220px;
+    height: 240px;
+    background: white;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 20px;
+    box-shadow:
+        20px 20px 60px rgba(0, 0, 0, 0.1),
+        -5px -5px 10px rgba(255, 255, 255, 0.8);
+    cursor: default;
+}
+
+.iso-card:hover {
+    transform: translateY(-20px) scale(1.02);
+    box-shadow:
+        30px 30px 70px rgba(0, 0, 0, 0.15),
+        -5px -5px 10px rgba(255, 255, 255, 0.8);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.card-content {
+    position: absolute;
+    inset: 4px;
+    /* Slight gap for border effect */
+    background: white;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    z-index: 2;
+    overflow: hidden;
+    /* Clip step number */
+}
+
+/* Colored Top Borders */
+.iso-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 4px;
+    border-radius: 4px;
+    z-index: 5;
+}
+
+.iso-card:nth-child(1)::before {
+    background: #3b82f6;
+    box-shadow: 0 0 10px #3b82f6;
+}
+
+.iso-card:nth-child(2)::before {
+    background: #8b5cf6;
+    box-shadow: 0 0 10px #8b5cf6;
+}
+
+.iso-card:nth-child(3)::before {
+    background: #ec4899;
+    box-shadow: 0 0 10px #ec4899;
+}
+
+.iso-card:nth-child(4)::before {
+    background: #10b981;
+    box-shadow: 0 0 10px #10b981;
+}
+
+.step-number {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 5rem;
+    font-weight: 900;
+    color: #f1f5f9;
+    z-index: -1;
+    font-family: sans-serif;
+}
+
+.step-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.iso-card h3 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.iso-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* Remove old complex pseudo-elements for clean look */
+.iso-card::after {
+    content: none;
+}
+
+@media (max-width: 1024px) {
+    .isometric-grid {
+        transform: none;
+        /* Flatten on smaller screens */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .guide-title {
+        font-size: 2.5rem;
+    }
+
+    .iso-card {
+        transform: none !important;
+        /* Disable grid skew */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .iso-card:hover {
+        transform: translateY(-5px) !important;
+    }
+}

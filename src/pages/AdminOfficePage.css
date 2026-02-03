@@ -1,0 +1,74 @@
+.office-header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.office-header-section h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.btn-add-office {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.office-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.office-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.office-table th {
+    background-color: #f8fafc;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.office-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+    vertical-align: middle;
+}
+
+.action-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.action-icon-btn:hover {
+    background-color: #f1f5f9;
+}
+
+.action-icon-btn.delete {
+    color: #ef4444;
+}
+
+.action-icon-btn.edit {
+    color: #3b82f6;
+}
